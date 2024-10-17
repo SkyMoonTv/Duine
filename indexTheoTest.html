@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Duine</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <style>
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      scroll-behavior: smooth;
+    }
+    .navbar {
+      background-color: transparent !important;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 10;
+    }
+    .nav-link, .navbar-brand {
+      color: white !important;
+      font-weight: bold;
+    }
+    .navbar-toggler-icon {
+      filter: invert(1); /* Rendre l'icône burger visible sur un fond sombre */
+    }
+    .hero-section {
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+    }
+    .hero-section h1 {
+      font-size: 4rem;
+      margin-bottom: 20px;
+    }
+    .hero-section p {
+      font-size: 1.5rem;
+    }
+    .feature-section {
+      padding: 100px 0;
+    }
+    .feature-section h2 {
+      font-size: 3rem;
+      margin-bottom: 30px;
+    }
+    .feature-section img, model-viewer {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+    footer {
+      background-color: #f8f9fa;
+      padding: 30px 0;
+      text-align: center;
+    }
+    footer p {
+      margin-bottom: 0;
+    }
+
+    /* Animations pour les cartes */
+    .card {
+      view-timeline: --card inline;
+      animation: empty linear forwards;
+      animation-timeline: --card;
+    }
+
+    .card h2 {
+      animation: clip-in linear backwards, clip-out linear forwards;
+      animation-timeline: --card;
+      animation-range: entry 50% entry 100%, exit 0% exit 50%;
+    }
+
+    @keyframes clip-in {
+      from { transform: translateY(100%); }
+      to { transform: translateY(0); }
+    }
+
+    @keyframes clip-out {
+      from { transform: translateY(0); }
+      to { transform: translateY(-100%); }
+    }
+  </style>
+</head>
+<body>
+
+  <!--NavBar-->
+  <nav class="navbar navbar-expand-lg bg-transparent">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Duine</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link" href="#">Accueil</a>
+          <a class="nav-link" href="#">Notre Shop</a>
+          <a class="nav-link" href="#">Contactez-nous</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+<!-- Hero Section -->
+<section class="hero-section bg-black">
+  <div class="container">
+    <h1>Duine</h1>
+    <p>Pétillance élégante, plaisir subtil</p>
+    <a href="#features" class="btn btn-light btn-lg mt-4">Découvrez plus</a>
+  </div>
+</section>
+
+<!-- Features Section avec modèles 3D -->
+<section id="features" class="feature-section bg-light text-dark">
+  <div class="container">
+    <div class="row mb-5 text-center">
+      <div class="col">
+        <h2>Un goût unique</h2>
+        <p>Redécouvrez la nature du goût grâce à Duine.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 card">
+        <!-- Modèle 3D de la bouteille Menthe Guarana -->
+        <model-viewer src="Model3D/MentheGuaranaSite.glb" auto-rotate camera-controls alt="Bouteille Menthe Guarana" style="width: 100%; height: 400px;"></model-viewer>
+      </div>
+      <div class="col-md-6 d-flex align-items-center">
+        <div>
+          <h3>Menthe Guarana</h3>
+          <p>Un goût unique de menthe mélangé au léger goût fruité du guarana.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col-md-6 d-flex align-items-center order-md-1">
+        <div>
+          <h3>Poire Rhodiola</h3>
+          <p>Un goût unique de poire mélangé au léger goût floral de la rhodiola.</p>
+        </div>
+      </div>
+      <div class="col-md-6 order-md-2 card">
+        <!-- Modèle 3D de la bouteille Poire Rhodiola -->
+        <model-viewer src="Model3D/MentheGuaranaSite.glb" auto-rotate camera-controls alt="Bouteille Poire Rhodiola" style="width: 100%; height: 400px;"></model-viewer>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <p>&copy; 2024 Duine Inc. Tous droits réservés.</p>
+    <p><a href="#">Politique de confidentialité</a> | <a href="#">Conditions d'utilisation</a></p>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Inclure model-viewer -->
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+<!-- JavaScript pour l'animation -->
+<script>
+  // Fonction pour suivre la progression de l'animation
+  const trackAnimationProgress = (animation, cb, precision = 5) => {
+    let progress = 0;
+    const updateValue = () => {
+      if (animation && animation.currentTime) {
+        let newProgress = animation.effect.getComputedTiming().progress * 1;
+        if (animation.playState === "finished") newProgress = 1;
+        newProgress = Math.max(0.0, Math.min(1.0, newProgress)).toFixed(precision);
+
+        if (newProgress != progress) {
+          progress = newProgress;
+          cb(progress);
+        }
+      }
+      requestAnimationFrame(updateValue);
+    };
+    requestAnimationFrame(updateValue);
+  };
+
+  // Appliquer la fonction aux cartes contenant des modèles 3D
+  document.querySelectorAll('.card:has(model-viewer)').forEach($card => {
+    const model = $card.querySelector('model-viewer');
+
+    trackAnimationProgress($card.getAnimations()[0], (progress) => {
+      // Appliquer la rotation au modèle 3D
+      model.orientation = `0deg 0deg ${progress * (-360 - 90)}deg`;
+    });
+  });
+</script>
+
+</body>
+</html>

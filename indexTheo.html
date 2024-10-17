@@ -12,8 +12,21 @@
       font-family: 'Helvetica Neue', sans-serif;
       scroll-behavior: smooth;
     }
+    .navbar {
+      background-color: transparent !important;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 10;
+    }
+    .nav-link, .navbar-brand {
+      color: white !important;
+      font-weight: bold;
+    }
+    .navbar-toggler-icon {
+      filter: invert(1); /* Rendre l'icône burger visible sur un fond sombre */
+    }
     .hero-section {
-      background: url('https://www.apple.com/v/iphone/home/ai/images/overview/hero/hero_static__e4hj3bovlyu2_large_2x.jpg') no-repeat center center;
       background-size: cover;
       height: 100vh;
       display: flex;
@@ -48,15 +61,33 @@
     footer p {
       margin-bottom: 0;
     }
+
   </style>
 </head>
 <body>
+
+  <!--NavBar-->
+  <nav class="navbar navbar-expand-lg bg-transparent">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Duine</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link" href="#">Accueil</a>
+          <a class="nav-link" href="#">Notre Shop</a>
+          <a class="nav-link" href="#">Contactez-nous</a>
+        </div>
+      </div>
+    </div>
+  </nav>
 
 <!-- Hero Section -->
 <section class="hero-section bg-black">
   <div class="container">
     <h1>Duine</h1>
-    <p>La perfection dans chaque détail</p>
+    <p>Pétillance élégante, plaisir subtil</p>
     <a href="#features" class="btn btn-light btn-lg mt-4">Découvrez plus</a>
   </div>
 </section>
@@ -66,31 +97,55 @@
   <div class="container">
     <div class="row mb-5 text-center">
       <div class="col">
-        <h2>Des performances incroyables</h2>
-        <p>Découvrez la puissance de la nouvelle puce A16 Bionic et un écran jamais vu auparavant.</p>
+        <h2>Un goût unique</h2>
+        <p>Redécouvrez la nature du goût grâce à Duine.</p>
       </div>
     </div>
     <div class="row">
       <div class="col-md-6">
-        <img src="https://www.apple.com/v/iphone/home/ai/images/overview/display/display_safari__ftvljk4csdq2_large_2x.jpg" alt="Display iPhone 16">
+        <img src="Img/bouteille2splash-Caméra.png" alt="Display Bouteille Menthe Guarana">
       </div>
       <div class="col-md-6 d-flex align-items-center">
         <div>
-          <h3>Un écran toujours plus brillant</h3>
-          <p>L'écran Super Retina XDR du nouvel iPhone 16 redéfinit la clarté et les couleurs vibrantes, idéal pour tout ce que vous regardez.</p>
+          <h3>Menthe Guarana</h3>
+          <p>Un goût unique de menthe mélangé au léger goût fruité du guarana.</p>
         </div>
       </div>
     </div>
     <div class="row mt-5">
-      <div class="col-md-6 d-flex align-items-center order-md-2">
+      <div class="col-md-6 d-flex align-items-center order-md-1">
         <div>
-          <h3>Des performances imbattables</h3>
-          <p>La puce A16 Bionic offre des performances ultra-rapides et une efficacité énergétique qui surpasse toutes les générations précédentes.</p>
+          <h3>Poire Rhodiola</h3>
+          <p>Un goût unique de poire mélangé au léger goût floral de la rhodiola.</p>
         </div>
       </div>
-      <div class="col-md-6 order-md-1">
-        <img src="https://www.apple.com/v/iphone/home/ai/images/overview/chip/chip_hero__eeb18x3m17y6_large_2x.jpg" alt="A16 Bionic Chip">
+      <div class="col-md-6 order-md-2">
+        <img src="Img/bouteille2splash - Copie-Caméra.png" alt="A16 Bouteille Poire rhodiola">
       </div>
+    </div>
+  </div>
+</section>
+
+<!--Carousel img-->
+<section class="bg-light">
+  <div class="container">
+    <div id="carouselExampleControls" class="carousel slide w-50 mx-auto" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="Img/bouteille2splash-Caméra.png" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="Img/bouteille2splash - Copie-Caméra.png" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
   </div>
 </section>
@@ -98,7 +153,7 @@
 <!-- Footer -->
 <footer>
   <div class="container">
-    <p>&copy; 2024 Apple Inc. Tous droits réservés.</p>
+    <p>&copy; 2024 Duine Inc. Tous droits réservés.</p>
     <p><a href="#">Politique de confidentialité</a> | <a href="#">Conditions d'utilisation</a></p>
   </div>
 </footer>
