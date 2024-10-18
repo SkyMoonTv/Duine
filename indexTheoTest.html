@@ -84,6 +84,38 @@
       from { transform: translateY(0); }
       to { transform: translateY(-100%); }
     }
+
+    .carousel-item img {
+      max-height: 350px;
+      max-width: 100%;
+      margin: auto;
+    }
+    .product-name {
+      text-align: center;
+      font-weight: bold;
+      font-size: 18px;
+      margin-top: 10px;
+    }
+    .product-price {
+      text-align: center;
+      font-size: 16px;
+      color: gray;
+    }
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      background-color: black;
+      border-radius: 50%;
+      padding: 10px;
+    }
+    .carousel {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .carousel-inner {
+      display: flex;
+      justify-content: center;
+    }
   </style>
 </head>
 <body>
@@ -149,6 +181,54 @@
     </div>
   </div>
 </section>
+
+
+<div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <!-- Premier produit -->
+    <div class="carousel-item active">
+      <div class="d-flex justify-content-center">
+        <div>
+          <img src="https://via.placeholder.com/200x350" class="d-block" alt="Produit 1">
+          <div class="product-name">KINGSTON GOLDEN PILS</div>
+          <div class="product-price">From $15.98</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Deuxième produit -->
+    <div class="carousel-item">
+      <div class="d-flex justify-content-center">
+        <div>
+          <img src="https://via.placeholder.com/200x350" class="d-block" alt="Produit 2">
+          <div class="product-name">EDGE HILL HAZY IPA</div>
+          <div class="product-price">From $15.98</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Troisième produit -->
+    <div class="carousel-item">
+      <div class="d-flex justify-content-center">
+        <div>
+          <img src="https://via.placeholder.com/200x350" class="d-block" alt="Produit 3">
+          <div class="product-name">VARIETY PACK</div>
+          <div class="product-price">$33.50</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contrôles gauche et droite -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
 
 <!-- Footer -->
 <footer>
