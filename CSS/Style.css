@@ -1,0 +1,204 @@
+.slogan{
+    color: antiquewhite;
+    width:25%;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+  
+  /* DEMO-SPECIFIC STYLES */
+  .typewriter h1 {
+    color: #fff;
+    font-family: monospace;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  30% { border-color: orange }
+} 
+
+.logo{
+    width: 100px;
+}
+#produits {
+    margin-top: 0; /* Supprime la marge supérieure */
+    padding-top: 0; /* Supprime le padding supérieur si nécessaire */
+}
+.produit0 {
+    background-color: black;
+
+}
+.btn {
+    background-color: black;
+    width: 5%;
+    color: white;
+    text-decoration: double;
+}
+.arrow {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform: rotate(0deg);
+    cursor: pointer;
+}
+
+.arrow span {
+    display: block;
+    width: 1.5vw;
+    height: 1.5vw;
+    border-bottom: 5px solid white;
+    border-right: 5px solid white;
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: animate 2s infinite;
+}
+
+.arrow span:nth-child(2) {
+    animation-delay: -0.2s;
+}
+
+.arrow span:nth-child(3) {
+    animation-delay: -0.4s;
+}
+
+@keyframes animate {
+    0% {
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px, -20px);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: rotate(45deg) translate(20px, 20px);
+    }
+}
+/* Supprime la marge supérieure entre la vidéo et la section des produits */
+#produits {
+    margin-top: 0 !important;
+    padding-top: 0;
+}
+
+/* Supprime la marge dans la section produits */
+.produit0 {
+    margin-top: 0;
+    padding-top: 0;
+    height: 50%;
+}
+.video-header {
+    margin-bottom: 0; /* Assure-toi qu'il n'y a pas de marge en bas */
+}
+
+.navbar {
+    font-size: 1.2rem;
+    background-color: transparent !important; /* Navbar transparente */
+    box-shadow: none; /* Enlever toute ombre */
+}
+.navbar-brand {
+    font-size: 1.5rem;
+}
+.navbar-nav {
+    margin-left: auto;
+}
+.video-header {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Smooth Scroll CSS */
+html {
+    scroll-behavior: smooth; /* Défilement doux */
+}
+
+/*Import Theo CSS*/
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    scroll-behavior: smooth;
+  }
+  .feature-section {
+    padding: 100px 0;
+  }
+  .feature-section h2 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+  }
+  .feature-section img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+  .carousel-item img {
+    object-fit: cover;
+    height: 600px;
+  }
+  footer {
+    background-color: #f8f9fa;
+    padding: 30px 0;
+    text-align: center;
+  }
+  footer p {
+    margin-bottom: 0;
+  }
+
+  a img{
+    height: 70px;
+    width: 115%;
+    margin: 0;
+  }
+
+  .card-author {
+    font-weight: bold;
+    color: #6c757d; /* Couleur grise pour l'auteur */
+  }
+  
+  .card p {
+    font-size: 1.1rem;
+    font-style: italic;
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .card {
+    border: 1px solid #f0e6d2; /* Légère bordure beige */
+    background-color: #fff8ef;
+  }
+  
+  div h2{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: white;
+  }

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Duine</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  
+  <!-- Lien vers FontAwesome pour l'icône de loupe -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="CSS/Style.css">
+  <link rel="icon" href="Img/logo-sansfond.png" type="image/png">
+</head>
+<body>
+
+    <img src="Img/logo-sansfond.png" class="logo fixed-top">
+
+<!-- Navbar transparente -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active w-50 p-3 text-light" aria-current="page" href="#">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link w-50 p-3 text-light" href="#">Produits</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link w-50 p-3 text-light" href="#">Contact</a>
+          </li>
+          <!-- Icône de recherche uniquement -->
+          <li class="nav-item">
+            <a class="nav-link w-50 p-3 text-light" href="#"><i class="fas fa-search"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<!-- Section Vidéo avec Bootstrap -->
+<header class="video-header">
+    <div class="overlay d-flex flex-column justify-content-center align-items-center text-center">
+        
+        <!-- Bouton pour descendre vers la section suivante -->
+        <!--<a href="#section-sous" class="btn">En savoir plus</a>-->
+        <div class="typewriter">
+          <h1>Pétillance élégante, Plaisir subtil</h1>
+        </div>
+          <a href="#features"> <div class="arrow">
+          <span></span>
+          <span></span>
+          <span></span>
+      </div>
+      </a>
+  
+    </div>
+    <video autoplay muted loop id="background-video">
+        <source src="Video/Petillant.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas les vidéos HTML5.
+    </video>
+  </header>
+
+  <!-- Features Section -->
+<section id="features" class="feature-section bg-light text-dark">
+    <div class="container">
+      <div class="row mb-5 text-center">
+        <div class="col">
+          <h2>Un goût unique</h2>
+          <p>Redécouvrez la nature du goût grâce à Duine.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <img src="Img/bouteille2splash-Caméra.png" alt="Display Bouteille Menthe Guarana">
+        </div>
+        <div class="col-md-6 d-flex align-items-center">
+          <div>
+            <h3>Menthe Guarana</h3>
+            <p>Un goût unique de menthe mélangé au léger goût fruité du guarana.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-md-6 d-flex align-items-center order-md-1">
+          <div>
+            <h3>Poire Rhodiola</h3>
+            <p>Un goût unique de poire mélangé au léger goût floral de la rhodiola.</p>
+          </div>
+        </div>
+        <div class="col-md-6 order-md-2">
+          <img src="Img/bouteille2splash - Copie-Caméra.png" alt="A16 Bouteille Poire rhodiola">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--Carousel presentation produits-->
+  <div class="produit0" >
+    <div class="produit"  id="section-sous">
+      <section id="produits" class="container mt-0">
+        <h2 class="text-center text-light">Nos Produits</h2>
+        <div id="carousselProduits" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="d-flex flex-column justify-content-center align-items-center">
+                <img src="Img/bouteille2splash-Caméra 2.png" class="d-block produit w-50 p-3" alt="Produit 1">
+                <button type="button" class="btn btn-outline-light w-25 mt-3">DECOUVREZ PLUS</button>
+            </div>
+            
+            </div>
+            <div class="carousel-item">
+              <div class="d-flex flex-column justify-content-center align-items-center">
+                <img src="Img/PoireRhodiola.png" class="d-block produit w-75 p-3" alt="Produit 2">
+                <button type="button" class="btn btn-outline-light w-25 mt-3">DECOUVREZ PLUS</button>
+            </div>
+            
+            </div>
+            <div class="carousel-item">
+              <div class="d-flex flex-column justify-content-center align-items-center">
+                <img src="Img/bouteille_final_1-Photoroom.png" class="d-block produit w-75 p-3" alt="Produit 3">
+                <button type="button" class="btn btn-outline-light w-25 mt-3">DECOUVREZ PLUS</button>
+            </div>
+            
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carousselProduits" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Précédent</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carousselProduits" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Suivant</span>
+          </button>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- Carrousel des témoignages -->
+<section>
+<div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+  
+      <!-- Premier élément actif -->
+      <div class="carousel-item active">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card p-4 text-center border-light">
+              <div class="card-body">
+                <h5 class="text-success mb-2">★★★★★</h5>
+                <p class="card-text">"so easy and came so fast"</p>
+                <p class="card-author">--- SAOIRSE W ---</p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-md-4">
+            <div class="card p-4 text-center border-light">
+              <div class="card-body">
+                <h5 class="text-success mb-2">★★★★★</h5>
+                <p class="card-text">"Overall impression in my opinion is that this Pilsner is eerily similar to the alcoholic counterpart to the point where it's hard to tell there is no ... <a href='#'>Read more</a>"</p>
+                <p class="card-author">--- ---</p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-md-4">
+            <div class="card p-4 text-center border-light">
+              <div class="card-body">
+                <h5 class="text-success mb-2">★★★★★</h5>
+                <p class="card-text">"Hadn't had N/A beer before, but BERO tastes awesome! So far I've had the kingston pilsner and the noon wheat and would have never realized that is was... <a href='#'>Read more</a>"</p>
+                <p class="card-author">--- JAKE P ---</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Deuxième élément -->
+      <div class="carousel-item">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card p-4 text-center border-light">
+              <div class="card-body">
+                <h5 class="text-success mb-2">★★★★★</h5>
+                <p class="card-text">"Another great review for BERO"</p>
+                <p class="card-author">--- JOHN D ---</p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-md-4">
+            <div class="card p-4 text-center border-light">
+              <div class="card-body">
+                <h5 class="text-success mb-2">★★★★★</h5>
+                <p class="card-text">"This one is even better ... <a href='#'>Read more</a>"</p>
+                <p class="card-author">--- JANE R ---</p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-md-4">
+            <div class="card p-4 text-center border-light">
+              <div class="card-body">
+                <h5 class="text-success mb-2">★★★★★</h5>
+                <p class="card-text">"Amazing taste and quick delivery!"</p>
+                <p class="card-author">--- MARK T ---</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Boutons de navigation -->
+    <a class="carousel-control-prev" href="#testimonialCarousel" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#testimonialCarousel" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </a>
+  </div>
+</section>
+    
+<section class="bg-black">
+    <div class="container">
+        <h2>L'Histoire de Duine : L'Essence des Sommets</h2>
+        <p>Née des sources les plus pures et des ingrédients les plus rares, Duine n’est pas simplement une boisson, mais une expérience réservée à ceux qui dominent. Conçue pour les élites qui repoussent les limites du succès, Duine offre un équilibre unique entre apaisement et puissance. Chaque gorgée est infusée d’extraits énergétiques soigneusement sélectionnés, offrant à la fois vitalité et une sensation de calme maîtrisé.</p>
+        <p>Avec Duine, la confiance n’est plus une quête, mais un état d’esprit. C’est la boisson des âmes ambitieuses, des leaders nés, de ceux qui se tiennent au sommet et regardent l’avenir avec assurance. Duine : l’élixir des dominants.</p>
+    </div>
+
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+      <p>&copy; 2024 Duine Inc. Tous droits réservés.</p>
+      <p><a href="#">Politique de confidentialité</a> | <a href="#">Conditions d'utilisation</a></p>
+    </div>
+  </footer>
+
+  
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

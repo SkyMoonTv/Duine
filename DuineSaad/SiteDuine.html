@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duine</title>
+    <!-- Lien vers Bootstrap -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <!-- Lien vers FontAwesome pour l'icône de loupe -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="CSS/Style.css">
+    <style>
+        /* Custom CSS */
+        .navbar {
+            font-size: 1.2rem;
+            background-color: transparent !important; /* Navbar transparente */
+            box-shadow: none; /* Enlever toute ombre */
+        }
+        .navbar-brand {
+            font-size: 1.5rem;
+        }
+        .navbar-nav {
+            margin-left: auto;
+        }
+        .video-header {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
+        #background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+            object-fit: cover;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        /* Smooth Scroll CSS */
+        html {
+            scroll-behavior: smooth; /* Défilement doux */
+        }
+    </style>
+</head>
+<body>
+  <img src="ImagesEtVideos/logo-sansfond.png" class="logo fixed-top">
+
+  <!-- Navbar transparente -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active w-50 p-3 text-light" aria-current="page" href="#">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link w-50 p-3 text-light" href="#">Produits</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link w-50 p-3 text-light" href="#">Contact</a>
+          </li>
+          <!-- Icône de recherche uniquement -->
+          <li class="nav-item">
+            <a class="nav-link w-50 p-3 text-light" href="#"><i class="fas fa-search"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Section Vidéo avec Bootstrap -->
+  <header class="video-header">
+    <div class="overlay d-flex flex-column justify-content-center align-items-center text-center">
+        
+        <!-- Bouton pour descendre vers la section suivante -->
+        <!--<a href="#section-sous" class="btn">En savoir plus</a>-->
+        <div class="typewriter">
+          <h1>Pétillance élégante, Plaisir subtil</h1>
+        </div>
+          <a href="#section-sous"> <div class="arrow">
+          <span></span>
+          <span></span>
+          <span></span>
+      </div>
+      </a>
+  
+    </div>
+    <video autoplay muted loop id="background-video">
+        <source src="ImagesEtVideos/Petillant.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas les vidéos HTML5.
+    </video>
+  </header>
+
+  <body>
+    <div class="produit0" >
+      <div class="produit"  id="section-sous">
+        <section id="produits" class="container mt-0">
+          <h2 class="text-center text-light">Nos Produits</h2>
+          <div id="carousselProduits" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                  <img src="ImagesEtVideos/image-removebg.png" class="d-block produit w-50 p-3" alt="Produit 1">
+                  <button type="button" class="btn btn-outline-light w-25 p-3">DECOUVREZ PLUS</button>
+              </div>
+              
+              </div>
+              <div class="carousel-item">
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                  <img src="ImagesEtVideos/bouteille_final_1-Photoroom.png" class="d-block produit w-75 p-3" alt="Produit 3">
+                  <button type="button" class="btn btn-outline-light w-25 mt-3">DECOUVREZ PLUS</button>
+              </div>
+              
+              </div>
+              <div class="carousel-item">
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                  <img src="ImagesEtVideos/bouteille_final_1-Photoroom.png" class="d-block produit w-75 p-3" alt="Produit 3">
+                  <button type="button" class="btn btn-outline-light w-25 mt-3">DECOUVREZ PLUS</button>
+              </div>
+              
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousselProduits" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Précédent</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousselProduits" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Suivant</span>
+            </button>
+          </div>
+        </section>
+      </div>
+    </div>
+    
+  </body>
+
+
+    
+  
+  <!-- Lien vers Bootstrap JS et ses dépendances -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+</body>
+</html>
