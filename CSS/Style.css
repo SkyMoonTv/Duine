@@ -227,3 +227,49 @@ body {
     line-height: 1.6; /* Hauteur de ligne pour aérer le texte */
     font-weight: 300; /* Poids de la police */
 }
+
+.feature-section h3.menthe {
+  color: #4CAF50; /* Couleur verte pour Menthe Guarana */
+}
+
+.feature-section {
+  padding: 60px 0; /* Ajoute de l'espace autour de la section */
+}
+
+.feature-section h2 {
+  font-size: 2.5rem; 
+  font-weight: 700; 
+  margin-bottom: 30px; 
+  letter-spacing: 1px; 
+}
+
+.feature-section h3 {
+  font-size: 2rem; 
+  font-weight: 600; 
+  margin-bottom: 15px; 
+  color: #FFD700; 
+}
+
+.feature-section p {
+  font-size: 1.2rem; 
+  line-height: 1.6; 
+  color: #f0f0f0; 
+}
+
+.feature-section img {
+  border-radius: 15px; 
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
+  transition: transform 0.3s; 
+}
+
+.feature-section img:hover {
+  transform: scale(1.05); 
+}
+
+.text-center {
+  text-align: center; 
+}
+
+.mb-5 {
+  margin-bottom: 3rem; 
+}
