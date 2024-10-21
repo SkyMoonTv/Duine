@@ -39,7 +39,7 @@
     padding-top: 0; /* Supprime le padding supérieur si nécessaire */
 }
 .produit0 {
-    background-color: black;
+    background: linear-gradient(to top right, #2c3e50, #000000);lack;
 
 }
 .btn {
@@ -195,10 +195,35 @@ body {
   
   .card {
     border: 1px solid #f0e6d2; /* Légère bordure beige */
-    background-color: #fff8ef;
+    background-color: #f8f9fa;
   }
   
   div h2{
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: white;
   }
+
+  .notre-histoire {
+    background: linear-gradient(to bottom right, #2c3e50, #000000); /* Dégradé de couleurs */
+    color: white;
+    text-align: center; /* Centre le texte */
+    padding: 50px 20px; /* Ajoute de l'espaace autour du contenu */
+    font-family: 'Playfair Display', serif; /* Belle police d'écriture */
+}
+
+.contenu {
+    max-width: 800px; /* Limite la largeur pour un texte plus lisible */
+    margin: 0 auto; /* Centre le contenu dans la section */
+}
+
+.contenu h2 {
+    font-size: 2.5rem; /* Taille de la police du titre */
+    margin-bottom: 20px; /* Espace en bas du titre */
+}
+
+.contenu p {
+    font-size: 1.2rem; /* Taille de la police du texte */
+    line-height: 1.6; /* Hauteur de ligne pour aérer le texte */
+    font-weight: 300; /* Poids de la police */
+}
+

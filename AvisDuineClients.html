@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">i
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonial Carousel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .carousel {
+            position: relative;
+            width: 80%;
+            max-width: 800px;
+            margin: auto;
+            overflow: hidden;
+            border: 1px solid #ded7c9;
+            border-radius: 8px;
+            background: white;
+        }
+
+        .carousel-inner {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel-item {
+            min-width: 100%;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .testimonial-card {
+            background-color: #ffffff;
+            border: 1px solid #ded7c9;
+            padding: 20px;
+            width: 30%;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonial-text {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        .testimonial-author {
+            font-size: 12px;
+            margin-top: 10px;
+            color: #555;
+            font-style: italic;
+        }
+
+        .carousel-control {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.8);
+            border: none;
+            border-radius: 50%;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .carousel-control-prev {
+            left: 10px;
+        }
+
+        .carousel-control-next {
+            right: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="carousel">
+    <div class="carousel-inner" id="carouselInner">
+        <div class="carousel-item active">
+            <div class="testimonial-card">
+                <p class="testimonial-text">"Dès la première gorgée, je me suis senti comme une version améliorée de moi-même."</p>
+                <p class="testimonial-author">— MARK S</p>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">"Chaque fois que je prends Duine, je me rappelle que je fais partie de l'élite."</p>
+                <p class="testimonial-author">— BRANDON C</p>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">"Boire Duine, c'est comme accéder à un autre niveau de sophistication."</p>
+                <p class="testimonial-author">— SAOIRSE W</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="testimonial-card">
+                <p class="testimonial-text">"Avec Duine, je savoure non seulement le goût, mais aussi mon succès."</p>
+                <p class="testimonial-author">— EMMA D</p>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">"Un simple verre de Duine, et j'ai l'impression d'avoir tout sous contrôle."</p>
+                <p class="testimonial-author">— LIAM T</p>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">"Duine n'est pas juste une boisson, c'est l'essence de la supériorité."</p>
+                <p class="testimonial-author">— OLIVIA P</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="testimonial-card">
+                <p class="testimonial-text">"Il suffit d'une gorgée pour se sentir unique et distingué."</p>
+                <p class="testimonial-author">— NOAH K</p>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">"Enfin une boisson qui reflète vraiment qui je suis : exceptionnel."</p>
+                <p class="testimonial-author">— SOPHIE M</p>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">"Je ne me suis jamais senti aussi stylé en buvant quelque chose."</p>
+                <p class="testimonial-author">— JACK B</p>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control carousel-control-prev" id="prevBtn">&#10094;</button>
+    <button class="carousel-control carousel-control-next" id="nextBtn">&#10095;</button>
+</div>
+
+<script>
+    let currentIndex = 0;
+
+    const items = document.querySelectorAll('.carousel-item');
+    const totalItems = items.length;
+
+    document.getElementById('nextBtn').addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % totalItems;
+        updateCarousel();
+    });
+
+    document.getElementById('prevBtn').addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+        updateCarousel(false); // Défiler vers la gauche
+    });
+
+    function updateCarousel(isNext = true) {
+        const carouselInner = document.getElementById('carouselInner');
+        const direction = isNext ? -currentIndex * 100 : -((currentIndex + totalItems) % totalItems) * 100;
+        carouselInner.style.transform = `translateX(${direction}%)`;
+    }
+</script>
+
+</body>
+</html>
